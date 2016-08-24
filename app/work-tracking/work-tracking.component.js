@@ -11,14 +11,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var work_tracking_model_1 = require("./work-tracking.model");
+var work_tracking_service_1 = require("./work-tracking.service");
 var WorkTrackingCpmponent = (function () {
-    function WorkTrackingCpmponent(router) {
+    function WorkTrackingCpmponent(router, service) {
         this.router = router;
+        this.service = service;
+        this.errorMessage = 'Connection error';
         this.model = new work_tracking_model_1.WorkTracking(1, 'WorkTracking', 'mboId3243');
         this.show = false;
     }
     WorkTrackingCpmponent.prototype.ngOnInit = function () {
         return undefined;
+    };
+    WorkTrackingCpmponent.prototype.findAll = function () {
+        var _this = this;
+        return this.service.getAllWorkTracking().subscribe(function (workTrackings) { return _this.workTrackings = workTrackings; }, function (error) { return _this.errorMessage = error; });
     };
     WorkTrackingCpmponent.prototype.onShow = function () {
         this.show = true;
@@ -40,9 +47,10 @@ var WorkTrackingCpmponent = (function () {
             moduleId: module.id,
             templateUrl: 'work-tracking.component.html',
             styleUrls: ['work-tracking.component.css'],
-            directives: [router_1.ROUTER_DIRECTIVES]
+            directives: [router_1.ROUTER_DIRECTIVES],
+            providers: [work_tracking_service_1.WorkTrackingService]
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, work_tracking_service_1.WorkTrackingService])
     ], WorkTrackingCpmponent);
     return WorkTrackingCpmponent;
 }());

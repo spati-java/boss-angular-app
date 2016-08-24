@@ -1,17 +1,21 @@
 import {Component, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES, Router} from "@angular/router";
 import {WorkTracking} from "./work-tracking.model";
+import {WorkTrackingService} from "./work-tracking.service";
 
 @Component({
     moduleId:module.id,
     templateUrl:'work-tracking.component.html',
     styleUrls:['work-tracking.component.css'],
-    directives:[ROUTER_DIRECTIVES]
+    directives:[ROUTER_DIRECTIVES],
+    providers:[WorkTrackingService]
 
 })
 export class WorkTrackingCpmponent implements OnInit{
    
-    constructor(private router:Router){}
+    constructor(private router:Router,private service:WorkTrackingService){}
+    errorMessage = 'Connection error';
+    workTrackings: WorkTracking[];
     model = new WorkTracking(1,
         'WorkTracking',
         'mboId3243');
@@ -20,6 +24,10 @@ export class WorkTrackingCpmponent implements OnInit{
         return undefined;
     }
     show = false ;
+
+    findAll(){
+        return this.service.getAllWorkTracking().subscribe(workTrackings=> this.workTrackings = workTrackings,error =>this.errorMessage = <any>error);
+    }
 
     onShow(){
         this.show=true;

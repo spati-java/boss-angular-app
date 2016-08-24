@@ -6,3 +6,59 @@
 .padding-top-10{
     padding-top: 10px;
 }
+.payroll-date-label{
+    font-family: "Roboto Condensed";
+    font-size: large;
+    color: white;
+}
+div.container {
+    width: 100%;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+section {
+    margin-left: 170px;
+    padding: 1em;
+    overflow: hidden;
+}
+.padding-top-10{
+    padding-top: 10px;
+}
+
+.header{
+    padding: 0 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    color: #ccd1d3;
+    font-size: 13px;
+    display: block;
+    background-color: #0075a8;
+    min-height: 45px;
+}
+.title-header {
+    padding: 0 100px;
+    padding-top: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    font-size: 13px;
+    display: block;
+    background-color: #78c9cf;
+    min-height: 40px;
+}

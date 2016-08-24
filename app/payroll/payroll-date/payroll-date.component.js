@@ -15,7 +15,6 @@ var PayrollDateComponent = (function () {
     function PayrollDateComponent(service) {
         this.service = service;
         this.model = new payroll_date_model_1.PayrollDate();
-        this.savedData = {};
         this.options = ['ONCE', 'WEEKLY', 'BIWEEKLY', 'MONTHLY'];
         this.showData = false;
     }
@@ -25,10 +24,10 @@ var PayrollDateComponent = (function () {
     };
     PayrollDateComponent.prototype.save = function () {
         this.service.createPayrollDate(this.model).subscribe(function (data) {
-            this.savedData.push(data);
-            console.log(this.savedData.note + '   received response');
+            this.savedData = data;
+            console.log(this.savedData.note + '   received response-1');
         });
-        console.log(this.savedData[0]);
+        console.log(this.savedData.note + '   received response-2');
         this.showData = true;
     };
     PayrollDateComponent.prototype.getAllPayrollDate = function () {

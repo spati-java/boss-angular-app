@@ -1,7 +1,8 @@
 export class PayrollDate {
-    private id:string;
-    private date:string;
-    private cutoff:string;
-    private note:string;
-    private options:string[];
+    public id:string;
+    public date:string;
+    public cutoff:string;
+    public note:string;
+    public options:string[];
+
 }
