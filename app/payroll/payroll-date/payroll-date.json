@@ -1,0 +1,60 @@
+[
+
+  {
+    "id": "577d8419d2635c000186a21b",
+    "date": "2016-12-02",
+    "cutoff": "2016-11-28",
+    "note": null,
+    "options": [
+      "ONCE",
+      "BIWEEKLY",
+      "MONTHLY",
+      "WEEKLY"
+    ]
+  },
+  {
+    "id": "577d8419d2635c000186a21c",
+    "date": "2016-12-09",
+    "cutoff": "2016-12-05",
+    "note": null,
+    "options": [
+      "ONCE",
+      "BIWEEKLY",
+      "WEEKLY"
+    ]
+  },
+  {
+    "id": "577d8419d2635c000186a21d",
+    "date": "2016-12-16",
+    "cutoff": "2016-12-12",
+    "note": null,
+    "options": [
+      "ONCE",
+      "BIWEEKLY",
+      "MONTHLY",
+      "WEEKLY"
+    ]
+  },
+  {
+    "id": "577d8419d2635c000186a21e",
+    "date": "2016-12-23",
+    "cutoff": "2016-12-19",
+    "note": null,
+    "options": [
+      "ONCE",
+      "BIWEEKLY",
+      "WEEKLY"
+    ]
+  },
+  {
+    "id": "577d8419d2635c000186a21f",
+    "date": "2016-12-30",
+    "cutoff": "2016-12-26",
+    "note": null,
+    "options": [
+      "ONCE",
+      "BIWEEKLY",
+      "WEEKLY"
+    ]
+  }
+]

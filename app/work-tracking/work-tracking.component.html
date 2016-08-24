@@ -1,0 +1,87 @@
+<div class="container pull-left">
+    <div class="container">
+        <h2>Work Tracking Operations </h2>
+        <div class="container">
+            <div class="well">
+                <a type="button" data-toggle="collapse" data-target="#create" class="work-tracking">Create</a>
+            </div>
+
+            <div id="create" class="collapse">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4 padding-top-10" >
+                                <label> Name </label>
+                                <input type="text" class="form-control" [(ngModel)] ="model.name"
+                                       name="name">
+                            </div>
+
+                            <div class="col-md-4 padding-top-10"  >
+                                <label> Mbo Id  </label>
+                                <input type="text" class="form-control" [(ngModel)] ="model.mboId"
+                                       name="mboId">
+                            </div>
+                            <div class="col-md-4 padding-top-10">
+                                <label> Mile Stone </label>
+                                <input type="text" class="form-control"
+                                       name="mileStone">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-group-sm btn-primary" (click)="addWorkTracking();onGoToDisplayWorkTracking(3)">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <a type="button" data-toggle="collapse" data-target="#update" class="work-tracking">Update</a>
+            <div id="update" class="collapse">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4 padding-top-10" >
+                                <label> Id </label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-4 padding-top-10" >
+                                <label> Name </label>
+                                <input type="text" class="form-control" [(ngModel)] ="model.name"
+                                       name="name">
+                            </div>
+
+                            <div class="col-md-4 padding-top-10"  >
+                                <label> Mbo Id  </label>
+                                <input type="text" class="form-control" [(ngModel)] ="model.mboId"
+                                       name="mboId">
+                            </div>
+                            <div class="col-md-4 padding-top-10">
+                                <label> Mile Stone </label>
+                                <input type="text" class="form-control"
+                                       name="mileStone">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-group-sm btn-primary">Update</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <a type="button" data-toggle="collapse" data-target="#findOne" class="work-tracking">Find All</a>
+            <div id="findOne" class="collapse">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-4 padding-top-10" >
+                                <label> Id </label>
+                                <input type="text" class="form-control" [(ngModel)] ="model.id">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-group-sm btn-primary" (click)="findOne()">Find</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

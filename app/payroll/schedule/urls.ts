@@ -1,0 +1,2 @@
+export const INTEGRATION_BASE_URL ='http://boss-lb-dev.mbopartners.com/payroll/api/v1/integration/payroll-dates';
+export const GET_ALL_URL ='http://boss-lb-dev.mbopartners.com/payroll/api/v1/schedules';

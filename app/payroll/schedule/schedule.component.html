@@ -1,0 +1,192 @@
+<div class="container">
+
+    <!-- DISPLAY END POINTS -->
+
+    <div class="well"><a type="button" data-toggle="collapse" data-target="#find-all" class="">Show All </a></div>
+
+    <!-- DISPLAY ALL SCHEDULES -->
+
+    <div class="collapse" id="find-all">
+        <div *ngFor="let schedule of schedules">
+
+            <div class="pane panel-primary">
+                <div class="panel-heading "> Schedule Details</div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <fieldset>
+                                <label class="schedule-label">Skip Date:</label>
+                                <span class="schedule-label">{{schedule.skipDate}}</span>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <fieldset>
+                                <label class="schedule-label">Amount:</label>
+                                <span class="schedule-label">{{schedule.amount}}</span>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <fieldset>
+                                <label class="schedule-label">Mbo Id:</label>
+                                <span class="schedule-label">{{schedule.mboId}}</span>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <fieldset>
+                                <label class="schedule-label">Calculation Method:</label>
+                                <span>{{schedule.calculationMethod}}</span>
+                            </fieldset>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <label class="schedule-label">Payroll Date</label>
+                            <select>
+                                <option *ngFor="let item of getAllListItem(schedule.payrollDates)">
+                                    {{item}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                            <fieldset>
+                                <label class="schedule-label">Business Center ID:</label>
+                                <span>{{schedule.businessCenterId}}</span>
+                            </fieldset>
+                        </div>
+
+                    </div>
+
+                    <!-- Display Direct Deposits -->
+                    <div class="row">
+                        <div class="thumbnail">
+                            <h3> Direct Deposits </h3>
+                            <div *ngFor="let item of getAllListItem(schedule.directDeposits)"
+                                 style="border-top: 1px solid"
+                                 class="padding-top-10">
+                                <div>
+                                    <label> Bank Account Id:</label>
+                                    <span>{{item.bankAccountId}}</span>
+                                </div>
+                                <div>
+                                    <label> Amount:</label>
+                                    <span>${{item.amount}}</span>
+                                </div>
+                                <div>
+                                    <label> Order:</label>
+                                    <span>{{item.order}}</span>
+                                </div>
+                                <div>
+                                    <label> Payroll Reminder Flag:</label>
+                                    <span>{{item.payrollRemainderFlag}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="well"><a type="button" data-toggle="collapse" data-target="#search" class="">Search For Schedule</a>
+
+        <div class="collapse" id="search">
+
+            <!-- DISPLAY SEARCH FORM-->
+
+            <div>
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input #searchBox type="text" class="  search-query form-control" placeholder="Search"
+                               (keyup)="search(searchBox.value)"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-danger" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DISPLAY SEARCH RESULT -->
+            <div *ngFor="let res of searchResults">
+
+                <div class="pane panel-primary">
+                    <div class="panel-heading "> Schedule Details</div>
+
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3">
+                                <fieldset>
+                                    <label class="schedule-label">Skip Date:</label>
+                                    <span class="schedule-label">{{res.skipDate}}</span>
+                                </fieldset>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <fieldset>
+                                    <label class="schedule-label">Amount:</label>
+                                    <span class="schedule-label">{{res.amount}}</span>
+                                </fieldset>
+                            </div>
+                            <div class="col-sm-6 col-md-6">
+                                <fieldset>
+                                    <label class="schedule-label">Mbo Id:</label>
+                                    <span class="schedule-label">{{res.mboId}}</span>
+                                </fieldset>
+                            </div>
+                            <div class="col-sm-6 col-md-3">
+                                <fieldset>
+                                    <label class="schedule-label">Calculation Method:</label>
+                                    <span>{{res.calculationMethod}}</span>
+                                </fieldset>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <label class="schedule-label">Payroll Date</label>
+                                <select>
+                                    <option *ngFor="let item of getAllListItem(res.payrollDates)">
+                                        {{item}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-md-6">
+                                <fieldset>
+                                    <label class="schedule-label">Business Center ID:</label>
+                                    <span>{{res.businessCenterId}}</span>
+                                </fieldset>
+                            </div>
+
+                        </div>
+
+                        <!-- Display Direct Deposits -->
+                        <div class="row">
+                            <div class="thumbnail">
+                                <h3> Direct Deposits </h3>
+                                <div *ngFor="let item of getAllListItem(res.directDeposits)"
+                                     style="border-top: 1px solid"
+                                     class="padding-top-10">
+                                    <div>
+                                        <label> Bank Account Id:</label>
+                                        <span>{{item.bankAccountId}}</span>
+                                    </div>
+                                    <div>
+                                        <label> Amount:</label>
+                                        <span>${{item.amount}}</span>
+                                    </div>
+                                    <div>
+                                        <label> Order:</label>
+                                        <span>{{item.order}}</span>
+                                    </div>
+                                    <div>
+                                        <label> Payroll Reminder Flag:</label>
+                                        <span>{{item.payrollRemainderFlag}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

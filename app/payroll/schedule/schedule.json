@@ -1,0 +1,80 @@
+[{
+  "id" : "5798ed7f7dcadf0001b298e1",
+  "mboId" : "5679cb6a-add1-4d48-850e-a7f95ba29761",
+  "businessCenterId" : "57ab356bef1c21000132da52",
+  "startDate" : "2016-09-16",
+  "skipDate" : "2017-01-01",
+  "amount" : 2332.0,
+  "frequency" : "MONTHLY",
+  "calculationMethod" : "GROSS",
+  "directDeposits" : [ {
+    "bankAccountId" : "57b6370b26444f0001e2c2dd",
+    "amount" : 1,
+    "order" : 2,
+    "payrollRemainderFlag" : false
+  }, {
+    "bankAccountId" : "57b708fd26444f0001e2c2e0",
+    "amount" : 1,
+    "order" : 1,
+    "payrollRemainderFlag" : false
+  }, {
+    "bankAccountId" : "57b70b7326444f0001e2c2e1",
+    "amount" : 0,
+    "order" : 0,
+    "payrollRemainderFlag" : true
+  } ],
+  "payrollDates" : [ "2016-09-16", "2016-10-21", "2016-11-18", "2016-12-16" ]
+}, {
+  "id" : "57511eda08bacf0001056de6",
+  "mboId" : "2921016d-a42b-402c-aabd-bfab7c6ab588",
+  "businessCenterId" : "5750b2cd6a2619000115110a",
+  "startDate" : "2016-06-10",
+  "skipDate" :"2016-09-16",
+  "amount" : 750.0,
+  "frequency" : "WEEKLY",
+  "calculationMethod" : "GROSS",
+  "directDeposits" : [ {
+    "bankAccountId" : "5750b4da103b0c000123dbd9",
+    "amount" : 0,
+    "order" : 0,
+    "payrollRemainderFlag" : true
+  } ],
+  "payrollDates" : [ "2016-06-10", "2016-06-17", "2016-06-24", "2016-07-01", "2016-07-08", "2016-07-15", "2016-07-22", "2016-07-29", "2016-08-05", "2016-08-12", "2016-08-19", "2016-08-26", "2016-09-02", "2016-09-09", "2016-09-16", "2016-09-23", "2016-09-30", "2016-10-07", "2016-10-14", "2016-10-21", "2016-10-28", "2016-11-04", "2016-11-10", "2016-11-18", "2016-11-25", "2016-12-02", "2016-12-09", "2016-12-16", "2016-12-23", "2016-12-30" ]
+}, {
+  "id" : "57b78099d5ca450001229fe8",
+  "mboId" : "47e68233-8e53-47a3-b62c-27a03b857b44",
+  "businessCenterId" : "",
+  "startDate" : "2016-09-02",
+  "skipDate" : "2016-09-16",
+  "amount" : 2332.0,
+  "frequency" : "WEEKLY",
+  "calculationMethod" : "GROSS",
+  "directDeposits" : null,
+  "payrollDates" : [ "2016-09-02", "2016-09-09", "2016-09-16", "2016-09-23", "2016-09-30", "2016-10-07", "2016-10-14", "2016-10-21", "2016-10-28", "2016-11-04", "2016-11-10", "2016-11-18", "2016-11-25", "2016-12-02", "2016-12-09", "2016-12-16", "2016-12-23", "2016-12-30" ]
+}, {
+  "id" : "57a8e00b8762800001e1ad65",
+  "mboId" : "e70373cf-7f56-40ef-ace0-ecaf56dd5fc4",
+  "businessCenterId" : "5743103b6a26190001151108",
+  "startDate" : "2016-08-19",
+  "skipDate" : null,
+  "amount" : 4343.0,
+  "frequency" : "WEEKLY",
+  "calculationMethod" : "RETAIN",
+  "directDeposits" : [ {
+    "bankAccountId" : "57868fc33eee8c00017121bc",
+    "amount" : null,
+    "order" : 0,
+    "payrollRemainderFlag" : true
+  }, {
+    "bankAccountId" : "5780018c5c60cb00015d1c9c",
+    "amount" : 3434,
+    "order" : 1,
+    "payrollRemainderFlag" : false
+  }, {
+    "bankAccountId" : "57979a049565f400018581e2",
+    "amount" : 344343,
+    "order" : 2,
+    "payrollRemainderFlag" : false
+  } ],
+  "payrollDates" : [ "2016-08-19", "2016-08-26", "2016-09-02", "2016-09-09", "2016-09-16", "2016-09-23", "2016-09-30", "2016-10-07", "2016-10-14", "2016-10-21", "2016-10-28", "2016-11-04", "2016-11-10", "2016-11-18", "2016-11-25", "2016-12-02", "2016-12-09", "2016-12-16", "2016-12-23", "2016-12-30" ]
+}]

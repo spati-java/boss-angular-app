@@ -1,0 +1,154 @@
+[{
+  "amount": 5434.43,
+  "balance": 50000,
+  "businessCenterId": "businessCenterID",
+  "creationDate": "2016-01-01",
+  "endDate": "2016-12-31",
+  "glPostedDate": "2016-03-14",
+  "mboId": "ernb948905njfh-4548n-454njkhg",
+  "metadata": {},
+  "number": "8005",
+  "paymentsTotal": 0,
+  "projectId": "string",
+  "startDate": "string",
+  "status": "SCHEDULED",
+  "terms": "string",
+  "company": {
+    "address": {
+      "city": "OKC",
+      "line1": "string",
+      "line2": "string",
+      "postalCode": "string",
+      "state": "string"
+    },
+    "attentionTo": "Amy Schumer",
+    "name": "string"
+  },
+  "lineItems": [
+    {
+      "amount": 0,
+      "description": "Line Item-1 in Invoice",
+      "endDate": "string",
+      "hold": true,
+      "holdDate": "string",
+      "id": "string",
+      "invoiceId": "string",
+      "projectId": "string",
+      "quantity": 0,
+      "startDate": "string",
+      "type": "EXPENSE",
+      "unit": "45/hr"
+    },
+    {
+      "amount": 234.43,
+      "description": "Line Item-2 in Invoice",
+      "endDate": "string",
+      "hold": true,
+      "holdDate": "string",
+      "id": "string",
+      "invoiceId": "string",
+      "projectId": "string",
+      "quantity": 0,
+      "startDate": "string",
+      "type": "WORK",
+      "unit": "36/hr"
+    }
+  ],
+  "payments": [
+    {
+      "amount": 4525.34893,
+      "date": "2016-07-31"
+    },
+    {
+      "amount": 5634.123,
+      "date": "2016-08-01"
+    }
+  ],
+  "actions": [
+    {
+      "amount": 4525.34893,
+      "description": "Action -1"
+    },
+    {
+      "amount": 5634.123,
+      "description": "Action -2"
+    }
+  ]
+},
+  {
+    "amount": 5434.43,
+    "balance": 50000,
+    "businessCenterId": "businessCenterID",
+    "creationDate": "2016-01-01",
+    "endDate": "2016-12-31",
+    "glPostedDate": "2016-03-14",
+    "mboId": "ernb948905njfh-4548n-454njkhg",
+    "metadata": {},
+    "number": "8006",
+    "paymentsTotal": 0,
+    "projectId": "string",
+    "startDate": "string",
+    "status": "SCHEDULED",
+    "terms": "string",
+    "company": {
+      "address": {
+        "city": "OKC",
+        "line1": "string",
+        "line2": "string",
+        "postalCode": "string",
+        "state": "string"
+      },
+      "attentionTo": "Amy Schumer",
+      "name": "string"
+    },
+    "lineItems": [
+      {
+        "amount": 0,
+        "description": "Line Item-1 in Invoice",
+        "endDate": "string",
+        "hold": true,
+        "holdDate": "string",
+        "id": "string",
+        "invoiceId": "string",
+        "projectId": "string",
+        "quantity": 0,
+        "startDate": "string",
+        "type": "EXPENSE",
+        "unit": "45/hr"
+      },
+      {
+        "amount": 234.43,
+        "description": "Line Item-2 in Invoice",
+        "endDate": "string",
+        "hold": true,
+        "holdDate": "string",
+        "id": "string",
+        "invoiceId": "string",
+        "projectId": "string",
+        "quantity": 0,
+        "startDate": "string",
+        "type": "WORK",
+        "unit": "36/hr"
+      }
+    ],
+    "payments": [
+      {
+        "amount": 4525.34893,
+        "date": "2016-07-31"
+      },
+      {
+        "amount": 5634.123,
+        "date": "2016-08-01"
+      }
+    ],
+    "actions": [
+      {
+        "amount": 4525.34893,
+        "description": "Action -1"
+      },
+      {
+        "amount": 5634.123,
+        "description": "Action -2"
+      }
+    ]
+  }]

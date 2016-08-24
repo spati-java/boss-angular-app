@@ -1,0 +1,11 @@
+.header{
+    padding: 0 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    color: #ccd1d3;
+    font-size: 13px;
+    display: block;
+    background-color: #0075a8;
+    min-height: 45px;
+}

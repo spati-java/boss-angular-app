@@ -1,0 +1,114 @@
+<div class="container">
+
+    <div class="well title-header">
+        <p >Payroll Date Controller</p>
+    </div>
+    <nav>
+        <ul>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#find-all"> <span
+                    class=" glyphicon glyphicon-play"></span> Show All </a></li>
+            <li class="padding-top-10"><a type="button" data-toggle="modal" data-target="#myModal"> <span
+                    class=" glyphicon glyphicon-plus"></span> Create</a></li>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#update"><span
+                    class=" glyphicon glyphicon-pencil"></span> Update</a></li>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#delete"><span
+                    class=" glyphicon glyphicon-remove"></span> Delete</a></li>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#find-one"> <span
+                    class="glyphicon glyphicon-search"></span> Find By Id</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <div class="collapse" id="find-all">
+            <div class="row">
+                <div *ngFor="let date of payrollDates">
+
+                    <div class="col-sm-3 col-md-3 col-lg-3" >
+                        <div class="thumbnail" style="border-left: 5px solid #42A948; background-color: #F0F0F0; padding-left: 10px">
+                            <span> Id: {{date.id}}</span><br>
+                            <span> Note: {{date.note}}</span><br>
+                            <span> Payroll Date:{{date.date}}</span><br>
+                            <span style="color: red;"> Cutoff Date: {{date.cutoff}}</span><br>
+                            <span> Options : {{date.options}}</span><br>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section *ngIf="showData">
+
+        <div class="alert alert-success">
+            <strong>Success!</strong> Payroll Date Saved.
+        </div>
+        <div class="collapse" id="create">
+            <div class="row">
+                <div class="col-sm-4 col-md-4">
+                    <div class="thumbnail">
+                        <span> Note: {{savedData.note}}</span><br>
+                        <span> Payroll Date:  {{savedData.date}}</span><br>
+                        <span> Cutoff Date: {{savedData.cutoff}}</span><br>
+                        <span> Options : {{savedData.options}}</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CREATE MODAL -->
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title">Create Payroll Date Document</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <form>
+                            <div class="col-sm-3 col-md-6">
+                                <div class="form-group">
+                                    <label>Payroll Date:</label>
+                                    <input type="text" class="form-control" id="date" [(ngModel)]="model.date"
+                                           name="date">
+                                </div>
+                                <div class="form-group">
+                                    <label>Note:</label>
+                                    <input type="text" class="form-control" id="note" [(ngModel)]="model.note"
+                                           name="note">
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-md-6">
+
+                                <div class="form-group">
+                                    <label>Id:</label>
+                                    <input type="text" class="form-control" id="id" [(ngModel)]="model.id"
+                                           name="id">
+                                </div>
+                                <div class="form-group">
+                                    <label>Options:</label>
+                                    <select class="form-control" [(ngModel)]="model.options" name="options" multiple>
+                                        <option *ngFor="let t of options" [value]="t">{{t}}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="save()">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

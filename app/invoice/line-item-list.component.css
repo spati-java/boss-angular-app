@@ -1,0 +1,17 @@
+
+ .line-item-list-table {
+     list-style: none;
+     color:#985f0d;
+     font-family: "Al Bayan";
+     font-size:large;
+ }
+ .table-header {
+     font-family: "Roboto Condensed";
+     color:White;
+     background-color:#004444;
+     font-variant: small-caps;
+ }
+
+ .padding-top-10{
+     padding-top: 10px;
+ }

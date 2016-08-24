@@ -1,0 +1,14 @@
+.bank-account-table {
+    list-style: none;
+    color:#985f0d;
+    font-family: "Al Bayan";
+    font-size:large;
+}
+.table-header {
+    font-family: "Roboto Condensed";
+    font-style: normal;
+    font-weight: normal;
+    color:White;
+    background-color: #212b31;
+    font-variant: small-caps;
+}

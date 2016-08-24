@@ -1,0 +1,28 @@
+<h1>
+    displaying work tracking data
+</h1>
+
+<div class="container">
+    <table class=" table table-striped">
+            <thead>
+            <th>
+                Project Id
+            </th>
+            <th>
+                MboId
+            </th>
+            </thead>
+        <tbody>
+                <tr *ngFor="let item of workTrackings">
+
+                    <td>
+                        {{item.projectId}}
+                    </td>
+                    <td>
+                        {{item.mboId}}
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+        <button  type="reset" class="btn btn-success" (click)="onBack()">Back</button>
+</div>

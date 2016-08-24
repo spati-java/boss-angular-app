@@ -1,0 +1,94 @@
+<div class="container">
+
+    <!--  Loop for projects -->
+    <div *ngFor="let proj of projects" style="border:2px solid #004444" class="container project">
+
+        <!-- Display properties for project-->
+
+        <div class="col-md-3 col-sm-3">
+            <h1>
+                <label>Project :</label>
+                <span> {{proj.name}}</span>
+            </h1>
+        </div>
+
+        <div>
+            <div class="row thumbnail">
+
+            </div>
+            <div>
+                <fieldset>
+                    <label class="">Mbo Id:</label>
+                    <span>{{proj.weekEndingDay}}</span>
+                </fieldset>
+            </div>
+
+            <div>
+                <label class="">Billing Address City </label>
+                <span>{{proj.billingAddress.city}}</span>
+            </div>
+            <div>
+                <label class="">Balance: </label>
+                <span> ${{proj.balance}}</span>
+            </div>
+
+            <!-- Display Properties Contacts  -->
+
+            <div class="row ">
+                <div class="col-xs-6 col-md-6 thumbnail">
+                    <h3>Contacts</h3>
+                    <div *ngFor="let item of getAllListItems(proj.contacts)" style="border-top: 1px solid"
+                         class="padding-top-10">
+                        <div>
+                            <label> Status:</label>
+                            <span>{{item.status}}</span>
+                        </div>
+                        <div>
+                            <label> First Name:</label>
+                            <span>{{item.firstName}}</span>
+                        </div>
+                        <div>
+                            <label> Last Name:</label>
+                            <span>{{item.lastName}}</span>
+                        </div>
+                        <div>
+                            <label> Email:</label>
+                            <span>{{item.email}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Display Properties Charge Codes  -->
+
+                <div class="col-xs-6 col-md-6 thumbnail">
+                    <h3> Charge Codes</h3>
+                    <div *ngFor="let chrg of getAllListItems(proj.chargeCodes)" style="border-top: 1px solid "
+                         class="padding-top-10">
+                        <div>
+                            <label> Name:</label>
+                            <span>{{chrg.name}}</span>
+                        </div>
+                        <div>
+                            <label> Type:</label>
+                            <span>{{chrg.type}}</span>
+                        </div>
+                        <div>
+                            <label> Code:</label>
+                            <span>{{chrg.code}}</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-6 col-md-6 thumbnail">
+                    <h3> Mile Stones </h3>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>

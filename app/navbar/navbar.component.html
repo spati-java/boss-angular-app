@@ -1,0 +1,8 @@
+<div class="navbar-inverse">
+    <div class="navbar-brand">  <h3 >BOSS-MBO</h3></div>
+    <ul class="nav nav-pills">
+            <li  *ngFor = "let menu of menus" (click) = onSelect(hero)>
+               <a class="menues"> {{menu.name}} </a>
+            </li>
+    </ul>
+</div>
