@@ -1,12 +1,12 @@
 import {Component, OnInit} from "@angular/core";
 import {ROUTER_DIRECTIVES, Router} from "@angular/router";
-import {WorkTracking} from "./work-tracking.model";
-import {WorkTrackingService} from "./work-tracking.service";
+import {WorkTracking} from "./timecard.model";
+import {WorkTrackingService} from "./timecard.service";
 
 @Component({
     moduleId:module.id,
-    templateUrl:'work-tracking.component.html',
-    styleUrls:['work-tracking.component.css'],
+    templateUrl:'timecard.component.html',
+    styleUrls:['timecard.component.css'],
     directives:[ROUTER_DIRECTIVES],
     providers:[WorkTrackingService]
 

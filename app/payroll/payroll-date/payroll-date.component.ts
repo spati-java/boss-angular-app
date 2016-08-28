@@ -1,6 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {PayrollDateService} from "./payroll-date.service";
 import {PayrollDate} from "./payroll-date.model";
+import {Observable} from "rxjs/Rx";
 @Component({
     moduleId: module.id,
     templateUrl: 'payroll-date.component.html',
@@ -9,33 +10,39 @@ import {PayrollDate} from "./payroll-date.model";
 })
 export class PayrollDateComponent implements OnInit {
 
+    errorMessage = "no response from the server , check the connection";
     payrollDates:PayrollDate[];
-    model = new PayrollDate();
-    savedData : PayrollDate;
+    model = new PayrollDate('', '', '', '', []);
+    savedData = new PayrollDate('', '', '', '', []);
     options = ['ONCE', 'WEEKLY', 'BIWEEKLY', 'MONTHLY'];
     showData = false;
+
+    // for search
+    searchResults:PayrollDate[];
 
     constructor(private service:PayrollDateService) {
     }
 
     ngOnInit():any {
         this.getAllPayrollDate();
-        return undefined;
     }
 
     save() {
-        this.service.createPayrollDate(this.model).subscribe(function (data) {
-            this.savedData = data;
-            console.log(this.savedData.note + '   received response-1');
-        });
+        this.service.createPayrollDate(this.model).subscribe(data=>this.savedData = data);
+    }
 
-        console.log( this.savedData.note + '   received response-2');
-        this.showData = true;
-
+    updatePayrollDate() {
+        this.service.updatePayrollDate(this.model).subscribe(data=>this.savedData = data);
     }
 
     getAllPayrollDate() {
         this.service.getAllPayrollDates().subscribe(dates=>this.payrollDates = dates);
+
+    }
+
+    search(term:string) {
+        this.service.search(term).subscribe(result=>this.searchResults = result)
+        this.showData = true;
     }
 
 }

@@ -1,11 +1,11 @@
 "use strict";
 var WorkTracking = (function () {
-    function WorkTracking(id, projectId, mboId) {
+    function WorkTracking(id, mboId, projectId) {
         this.id = id;
-        this.projectId = projectId;
         this.mboId = mboId;
+        this.projectId = projectId;
     }
     return WorkTracking;
 }());
 exports.WorkTracking = WorkTracking;
-//# sourceMappingURL=work-tracking.model.js.map
+//# sourceMappingURL=timecard.model.js.map

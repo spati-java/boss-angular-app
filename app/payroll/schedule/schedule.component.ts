@@ -25,7 +25,7 @@ export class ScheduleComponent implements OnInit{
         this.service.getAllSchedule().subscribe(schedules =>this.schedules=schedules);
     }
     getAllListItem(obj){
-       return Object.keys(obj).map((key)=>{return obj[key]}) 
+            return Object.keys(obj).map((key)=>{return obj[key]})
     }
 
     search(term:string) {

@@ -14,25 +14,31 @@ var payroll_date_model_1 = require("./payroll-date.model");
 var PayrollDateComponent = (function () {
     function PayrollDateComponent(service) {
         this.service = service;
-        this.model = new payroll_date_model_1.PayrollDate();
+        this.errorMessage = "no response from the server , check the connection";
+        this.model = new payroll_date_model_1.PayrollDate('', '', '', '', []);
+        this.savedData = new payroll_date_model_1.PayrollDate('', '', '', '', []);
         this.options = ['ONCE', 'WEEKLY', 'BIWEEKLY', 'MONTHLY'];
         this.showData = false;
     }
     PayrollDateComponent.prototype.ngOnInit = function () {
         this.getAllPayrollDate();
-        return undefined;
     };
     PayrollDateComponent.prototype.save = function () {
-        this.service.createPayrollDate(this.model).subscribe(function (data) {
-            this.savedData = data;
-            console.log(this.savedData.note + '   received response-1');
-        });
-        console.log(this.savedData.note + '   received response-2');
-        this.showData = true;
+        var _this = this;
+        this.service.createPayrollDate(this.model).subscribe(function (data) { return _this.savedData = data; });
+    };
+    PayrollDateComponent.prototype.updatePayrollDate = function () {
+        var _this = this;
+        this.service.updatePayrollDate(this.model).subscribe(function (data) { return _this.savedData = data; });
     };
     PayrollDateComponent.prototype.getAllPayrollDate = function () {
         var _this = this;
         this.service.getAllPayrollDates().subscribe(function (dates) { return _this.payrollDates = dates; });
+    };
+    PayrollDateComponent.prototype.search = function (term) {
+        var _this = this;
+        this.service.search(term).subscribe(function (result) { return _this.searchResults = result; });
+        this.showData = true;
     };
     PayrollDateComponent = __decorate([
         core_1.Component({

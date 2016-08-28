@@ -2,7 +2,7 @@ import { provideRouter, RouterConfig } from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {operationRoutes} from "./operations/operation.routes";
 import {homeRoutes} from "./home/home.routes";
-import {workTrackingRoutes} from "./work-tracking/work-tracking.routes";
+import {workTrackingRoutes} from "./work-tracking/timecard.routes";
 
 const routes: RouterConfig = [
     ...operationRoutes,

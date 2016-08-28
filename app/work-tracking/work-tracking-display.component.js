@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var work_tracking_service_1 = require("./work-tracking.service");
+var timecard_service_1 = require("./timecard.service");
 var WorkTrackingDisplay = (function () {
     function WorkTrackingDisplay(service, router) {
         this.service = service;
@@ -35,9 +35,9 @@ var WorkTrackingDisplay = (function () {
             moduleId: module.id,
             templateUrl: 'work-tracking-display.component.html',
             styleUrls: ['work-tracking-display-component.css'],
-            providers: [work_tracking_service_1.WorkTrackingService]
+            providers: [timecard_service_1.WorkTrackingService]
         }), 
-        __metadata('design:paramtypes', [work_tracking_service_1.WorkTrackingService, router_1.Router])
+        __metadata('design:paramtypes', [timecard_service_1.WorkTrackingService, router_1.Router])
     ], WorkTrackingDisplay);
     return WorkTrackingDisplay;
 }());

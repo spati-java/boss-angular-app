@@ -10,14 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var work_tracking_model_1 = require("./work-tracking.model");
-var work_tracking_service_1 = require("./work-tracking.service");
+var timecard_model_1 = require("./timecard.model");
+var timecard_service_1 = require("./timecard.service");
 var WorkTrackingCpmponent = (function () {
     function WorkTrackingCpmponent(router, service) {
         this.router = router;
         this.service = service;
         this.errorMessage = 'Connection error';
-        this.model = new work_tracking_model_1.WorkTracking(1, 'WorkTracking', 'mboId3243');
+        this.model = new timecard_model_1.WorkTracking(1, 'WorkTracking', 'mboId3243');
         this.show = false;
     }
     WorkTrackingCpmponent.prototype.ngOnInit = function () {
@@ -45,14 +45,14 @@ var WorkTrackingCpmponent = (function () {
     WorkTrackingCpmponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            templateUrl: 'work-tracking.component.html',
-            styleUrls: ['work-tracking.component.css'],
+            templateUrl: 'timecard.component.html',
+            styleUrls: ['timecard.component.css'],
             directives: [router_1.ROUTER_DIRECTIVES],
-            providers: [work_tracking_service_1.WorkTrackingService]
+            providers: [timecard_service_1.WorkTrackingService]
         }), 
-        __metadata('design:paramtypes', [router_1.Router, work_tracking_service_1.WorkTrackingService])
+        __metadata('design:paramtypes', [router_1.Router, timecard_service_1.WorkTrackingService])
     ], WorkTrackingCpmponent);
     return WorkTrackingCpmponent;
 }());
 exports.WorkTrackingCpmponent = WorkTrackingCpmponent;
-//# sourceMappingURL=work-tracking.component.js.map
+//# sourceMappingURL=timecard.component.js.map

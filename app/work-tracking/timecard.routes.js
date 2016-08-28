@@ -3,4 +3,4 @@ var work_tracking_display_component_1 = require("./work-tracking-display.compone
 exports.workTrackingRoutes = [
     { path: 'display-work-tracking/:id', component: work_tracking_display_component_1.WorkTrackingDisplay }
 ];
-//# sourceMappingURL=work-tracking.routes.js.map
+//# sourceMappingURL=timecard.routes.js.map

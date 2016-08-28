@@ -1,21 +1,21 @@
 <div class="container">
 
     <div class="well title-header">
-        <p >Payroll Date Controller</p>
+        <p>Payroll Date Controller</p>
     </div>
     <nav>
         <ul>
             <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#find-all"> <span
                     class=" glyphicon glyphicon-play"></span> Show All </a></li>
-            <li class="padding-top-10"><a type="button" data-toggle="modal" data-target="#myModal"> <span
-                    class=" glyphicon glyphicon-plus"></span> Create</a></li>
-            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#update"><span
-                    class=" glyphicon glyphicon-pencil"></span> Update</a></li>
+            <li class="padding-top-10"><a type="button" data-toggle="modal" data-target="#create"> <span
+                    class=" glyphicon glyphicon-plus"></span> Create / Update</a></li>
             <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#delete"><span
                     class=" glyphicon glyphicon-remove"></span> Delete</a></li>
             <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#find-one"> <span
-                    class="glyphicon glyphicon-search"></span> Find By Id</a>
-            </li>
+                class="glyphicon glyphicon-search"></span> Find By Id</a>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#search"> <span
+                    class="glyphicon glyphicon-search"></span> Search</a>
+        </li>
         </ul>
     </nav>
     <section>
@@ -23,8 +23,9 @@
             <div class="row">
                 <div *ngFor="let date of payrollDates">
 
-                    <div class="col-sm-3 col-md-3 col-lg-3" >
-                        <div class="thumbnail" style="border-left: 5px solid #42A948; background-color: #F0F0F0; padding-left: 10px">
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="thumbnail"
+                             style="border-left: 5px solid #42A948; background-color: #F0F0F0; padding-left: 10px">
                             <span> Id: {{date.id}}</span><br>
                             <span> Note: {{date.note}}</span><br>
                             <span> Payroll Date:{{date.date}}</span><br>
@@ -39,34 +40,51 @@
         </div>
     </section>
 
-    <section *ngIf="showData">
+    <section>
 
-        <div class="alert alert-success">
-            <strong>Success!</strong> Payroll Date Saved.
-        </div>
-        <div class="collapse" id="create">
-            <div class="row">
-                <div class="col-sm-4 col-md-4">
-                    <div class="thumbnail">
-                        <span> Note: {{savedData.note}}</span><br>
-                        <span> Payroll Date:  {{savedData.date}}</span><br>
-                        <span> Cutoff Date: {{savedData.cutoff}}</span><br>
-                        <span> Options : {{savedData.options}}</span><br>
+        <!-- DISPLAY SEARCH FORM-->
+        <div class="collapse" id="search">
+            <div>
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input #searchBox type="text" class="  search-query form-control" placeholder="Search"
+                               (keyup)="search(searchBox.value)"/>
+                                <span class="input-group-btn">
+                                </span>
                     </div>
                 </div>
             </div>
         </div>
+           <!-- DISPLAY SEARCH RESULT-->
+        <div class="row padding-top-10">
+            <div *ngFor="let date of searchResults">
+
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <div class="thumbnail"
+                         style="border-left: 5px solid #42A948; background-color: #F0F0F0; padding-left: 10px">
+                        <span> Id: {{date.id}}</span><br>
+                        <span> Note: {{date.note}}</span><br>
+                        <span> Payroll Date:{{date.date}}</span><br>
+                        <span style="color: red;"> Cutoff Date: {{date.cutoff}}</span><br>
+                        <span> Options : {{date.options}}</span><br>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </section>
+
     <!-- CREATE MODAL -->
     <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="create" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h5 class="modal-title">Create Payroll Date Document</h5>
+                    <h5 class="modal-title" style="margin-top: 10px">Create / Update Payroll Date Document</h5>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -103,7 +121,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="save()">Save</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="save()">Create</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="updatePayrollDate()">Update</button>
                 </div>
             </div>
 

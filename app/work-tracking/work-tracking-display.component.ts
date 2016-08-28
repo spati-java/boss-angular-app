@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {Router} from "@angular/router";
-import {WorkTracking} from "./work-tracking.model";
-import {WorkTrackingService} from "./work-tracking.service";
+import {WorkTracking} from "./timecard.model";
+import {WorkTrackingService} from "./timecard.service";
 import {error} from "util";
 @Component({
     moduleId:module.id,

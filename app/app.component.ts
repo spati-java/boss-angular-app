@@ -6,7 +6,7 @@ import {ROUTER_DIRECTIVES} from '@angular/router'
 import {HomeComponent} from "./home/home.component";
 import {OperationComponent} from "./operations/operation.component";
 import {LineItemListComponent} from "./invoice/line-item-list.component";
-import {WorkTrackingCpmponent} from "./work-tracking/work-tracking.component";
+import {WorkTrackingCpmponent} from "./work-tracking/timecard.component";
 import {WorkTrackingDisplay} from "./work-tracking/work-tracking-display.component";
 import {InvoiceComponent} from "./invoice/invoicing/invoice.component";
 import {ProjectComponent} from "./project/project.component";

@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="well title-header">
-        <p >Payroll Date Controller</p>
+        <p > Work Tracking Controller</p>
     </div>
     <nav>
         <ul>
@@ -9,7 +9,7 @@
                     class=" glyphicon glyphicon-play"></span> Show All </a></li>
             <li class="padding-top-10"><a type="button" data-toggle="modal" data-target="#myModal"> <span
                     class=" glyphicon glyphicon-plus"></span> Create</a></li>
-            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#update"><span
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#find-one"><span
                     class=" glyphicon glyphicon-pencil"></span> Update</a></li>
             <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#delete"><span
                     class=" glyphicon glyphicon-remove"></span> Delete</a></li>
@@ -19,7 +19,7 @@
 
         </ul>
     </nav>
-    
+
     <!-- FIND ID FORM SECTION -->
     <section>
 
@@ -36,6 +36,21 @@
         </div>
     </section>
 
+    <!-- DELETE ID FORM SECTION -->
+    <section>
+
+        <div class="collapse" id="delete">
+            <div>
+                <label>Delete</label>
+                <input type="text" class="form-control"
+                       [(ngModel)]="model.id" name="id" style="">
+            </div>
+            <div class="padding-top-10">
+                <button class="btn btn-danger" (click)="getMenuModelById()"> Delete</button>
+            </div>
+
+        </div>
+    </section>
     <section>
         <div class="collapse" id="find-all">
             <div class="row">
@@ -84,7 +99,7 @@
             <div class="modal-content">
                 <div class="modal-header header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h5 class="modal-title">Create Payroll Date Document</h5>
+                    <h5 class="modal-title" style="padding-top: 10px">Timecard</h5>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -98,7 +113,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Note:</label>
-                                    <input type="text" class="form-control" id="note" [(ngModel)]="model.note"
+                                    <input type="text" class="form-control" id="note" [(ngModel)]="model.amount"
                                            name="note">
                                 </div>
                             </div>
@@ -111,8 +126,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Options:</label>
-                                    <select class="form-control" [(ngModel)]="model.options" name="options" multiple>
-                                        <option *ngFor="let t of options" [value]="t">{{t}}</option>
+                                    <select class="form-control" [(ngModel)]="model.options" name="options">
                                     </select>
                                 </div>
                             </div>

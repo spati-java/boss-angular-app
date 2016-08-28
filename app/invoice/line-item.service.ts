@@ -27,7 +27,6 @@ export class LineItemService {
 
     constructor(private http:Http) {
     }
-
     // POST for invoice line items
     createLineItem(lineItem):Observable<LineItem> {
         let body = JSON.stringify(lineItem);
