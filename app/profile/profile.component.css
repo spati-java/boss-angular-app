@@ -54,3 +54,9 @@ section {
     background-color: #78c9cf;
     min-height: 40px;
 }
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

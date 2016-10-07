@@ -1,0 +1,185 @@
+<div class="container">
+
+    <div class="well title-header">
+        <p>Profiles</p>
+    </div>
+    <nav>
+        <ul>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#search"> <span
+                    class="glyphicon glyphicon-search"></span> Full  Text Search</a>
+            </li>
+
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#autocomplete"> <span
+                    class="glyphicon glyphicon-search"></span> Search By  Name</a>
+
+                <!-- DISPLAY auto complete search form FORM-->
+                <div class="collapse" id="autocomplete">
+                    <div>
+                        <div id="autocomplete-search-input">
+                            <div class="input-group col-md-12">
+                                <input #term type="text"  placeholder="Search"
+                                       (keyup)="autoComplete(term.value)"/>
+                                <span class="input-group-btn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#title-search"> <span
+                    class="glyphicon glyphicon-search"></span> Search  By Title</a>
+
+                <!-- DISPLAY auto complete search form FORM-->
+                <div class="collapse" id="title-search">
+                    <div>
+                        <div id="title-search-input">
+                            <div class="input-group col-md-12">
+                                <input #title type="text"  placeholder="Search"
+                                       (keyup)="searchByTitle(title.value)"/>
+                                <span class="input-group-btn">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+        </ul>
+    </nav>
+    <section>
+    <div>
+        <div class="row">
+            <div *ngFor="let prof of autoCompleteSearchResult">
+
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <div class="card"
+                         style="border-left: 5px solid #42A948; background-color: #F0F0F0; padding-left: 10px">
+
+                        <div class="card-block">
+                            <div class="pull-left">
+                                <img src={{prof.image}} class="img-circle" alt=".." width="130" height="130">
+                            </div>
+                            <div class="pull-left">
+                                <h4 class="card-title">{{prof.title}}</h4>
+                                <h5> {{prof.name}}</h5>
+                                <span> {{prof.workExperience.totalExp}}</span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section>
+        <div>
+            <div class="row">
+                <div *ngFor="let prof of searchByTtileList">
+
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <div class="card"
+                             style="border-left: 5px solid #42A948; background-color: #F0F0F0; padding-left: 10px">
+
+                            <div class="card-block">
+                                <div class="pull-left">
+                                    <img src="/app/profile/sourav-pati.jpg" class="img-circle" alt=".." width="130" height="130">
+                                </div>
+                                <div class="pull-left">
+                                    <h4 class="card-title">{{prof.title}}</h4>
+                                    <span> Name: {{prof.name}}</span>
+                                    <button class="btn-primary"> view details</button>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+        <!-- DISPLAY SEARCH FORM-->
+        <div class="collapse" id="search">
+            <div>
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input #searchBox type="text" class="  search-query form-control" placeholder="Search"
+                               (keyup)="search(searchBox.value)"/>
+                                <span class="input-group-btn">
+                                </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DISPLAY SEARCH RESULT-->
+        <section>
+            <div>
+                <div class="row">
+                    <div *ngFor="let prof of searchResults">
+
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div class="card"
+                                 style="border-left: 5px solid #42A948; background-color: #F0F0F0; padding-left: 10px">
+
+                                <div class="card-block">
+                                    <div class="pull-left">
+                                        <img src="/app/profile/sourav-pati.jpg" class="img-circle" alt=".." width="130" height="130">
+                                    </div>
+                                    <div class="pull-left">
+                                        <h4 class="card-title">{{prof.title}}</h4>
+                                        <span> Name: {{prof.name}}</span>
+                                        <button class="btn-primary"> view details</button>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--<div class="row padding-top-10">
+            <div *ngFor="let prof of autoCompleteSearchResult">
+
+                <div class="col-sm-3 col-md-3 col-lg-3">
+                    <div class="thumbnail"
+                         style="border-left: 5px solid #42A948; background-color: #F0F0F0; padding-left: 10px">
+                        <span> Name: {{prof.name}}</span> <br>
+                        <span> Languages : {{prof.languages}}</span>
+                        <span> Edcuation : {{prof.education.degrees}}</span>
+                        <span> Edcuation : {{prof.education.univerities}}</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>-->
+
+    </section>
+
+    <!-- CREATE MODAL -->
+    <!-- Modal -->
+
+
+</div>
+

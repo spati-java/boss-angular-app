@@ -1,4 +1,4 @@
-export  class BankAccount {
+export class BankAccount {
     id:string;
     bankName:string;
     nameOnAccount:string;

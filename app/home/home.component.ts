@@ -38,5 +38,11 @@ export class HomeComponent implements OnInit{
     onGotoPayrollDate(id){
         this.router.navigate(['/payroll-date', id]);
     }
-    
+
+    onGoToBankAccount(id){
+        this.router.navigate(['/bank-account', id]);
+    }
+    onGoToProfile(id){
+        this.router.navigate(['/profile', id]);
+    }
 }

@@ -22,6 +22,7 @@ var invoice_component_1 = require("./invoice/invoicing/invoice.component");
 var project_component_1 = require("./project/project.component");
 var schedule_component_1 = require("./payroll/schedule/schedule.component");
 var payroll_date_component_1 = require("./payroll/payroll-date/payroll-date.component");
+var profile_component_1 = require("./profile/profile.component");
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Invoice Details';
@@ -34,7 +35,7 @@ var AppComponent = (function () {
             directives: [navabr_component_1.NavbarComponent, bank_account_component_1.BankAccountComponent, line_item_form_component_1.LineItemFormComponent, home_component_1.HomeComponent, router_1.ROUTER_DIRECTIVES],
             precompile: [home_component_1.HomeComponent, operation_component_1.OperationComponent, line_item_form_component_1.LineItemFormComponent,
                 line_item_list_component_1.LineItemListComponent, timecard_component_1.WorkTrackingCpmponent, work_tracking_display_component_1.WorkTrackingDisplay,
-                invoice_component_1.InvoiceComponent, project_component_1.ProjectComponent, schedule_component_1.ScheduleComponent, payroll_date_component_1.PayrollDateComponent]
+                invoice_component_1.InvoiceComponent, project_component_1.ProjectComponent, schedule_component_1.ScheduleComponent, payroll_date_component_1.PayrollDateComponent, bank_account_component_1.BankAccountComponent, profile_component_1.ProfileComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

@@ -38,6 +38,12 @@ var HomeComponent = (function () {
     HomeComponent.prototype.onGotoPayrollDate = function (id) {
         this.router.navigate(['/payroll-date', id]);
     };
+    HomeComponent.prototype.onGoToBankAccount = function (id) {
+        this.router.navigate(['/bank-account', id]);
+    };
+    HomeComponent.prototype.onGoToProfile = function (id) {
+        this.router.navigate(['/profile', id]);
+    };
     HomeComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
