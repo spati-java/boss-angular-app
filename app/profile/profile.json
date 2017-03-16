@@ -1,0 +1,64 @@
+[{
+    "name":"Less Martin",
+    "title":"Project Manager",
+    "education":{
+      "univerities":["MIT","U of M"],
+      "degrees":["BS", "MS"]
+
+    },
+    "languages":["JAVA","HTML","CSS","C","SQL"]
+  }
+,
+  {
+      "name":"John Pattison",
+      "title":"Software Engineer",
+      "education":{
+        "univerities":["Standford", "OKlahoma Tech University"],
+        "degrees":["BS", "MS"]
+
+      },
+      "languages":["PASCAL","PYTHON","Angular2"]
+    },
+  {
+    "name":"John Pattison",
+    "title":"Software Engineer",
+    "education":{
+      "univerities":["Standford", "OKlahoma Tech University"],
+      "degrees":["BS", "MS"]
+
+    },
+    "languages":["PASCAL","PYTHON","Angular2"]
+  },
+  {
+    "name":"John Pattison",
+    "title":"Software Engineer",
+    "education":{
+      "univerities":["Standford", "OKlahoma Tech University"],
+      "degrees":["BS", "MS"]
+
+    },
+    "languages":["PASCAL","PYTHON","Angular2"]
+  },
+  {
+    "name":"John Pattison",
+    "title":"Software Engineer",
+    "education":{
+      "univerities":["Standford", "OKlahoma Tech University"],
+      "degrees":["BS", "MS"]
+
+    },
+    "languages":["PASCAL","PYTHON","Angular2"]
+  },
+  {
+    "name":"John Pattison",
+    "title":"Software Engineer",
+    "education":{
+      "univerities":["Standford", "OKlahoma Tech University"],
+      "degrees":["BS", "MS"]
+
+    },
+    "languages":["PASCAL","PYTHON","Angular2"]
+  }
+
+
+]

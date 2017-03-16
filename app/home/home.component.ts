@@ -45,4 +45,7 @@ export class HomeComponent implements OnInit{
     onGoToProfile(id){
         this.router.navigate(['/profile', id]);
     }
+    onGoToPolicy(id){
+        this.router.navigate(['/policy', id]);
+    }
 }

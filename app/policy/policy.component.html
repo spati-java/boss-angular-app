@@ -1,0 +1,122 @@
+<div class="container">
+
+    <div class="well title-header">
+        <p>Policy Controller</p>
+    </div>
+    <nav>
+        <ul>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#find-all"> <span
+                    class=" glyphicon glyphicon-play"></span> Show All </a></li>
+            <li class="padding-top-10"><a type="button" data-toggle="modal" data-target="#create"> <span
+                    class=" glyphicon glyphicon-plus"></span> Create / Update</a></li>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#delete"><span
+                    class=" glyphicon glyphicon-remove"></span> Delete</a></li>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#find-one"> <span
+                    class="glyphicon glyphicon-search"></span> Find By Id</a>
+            <li class="padding-top-10"><a type="button" data-toggle="collapse" data-target="#search"> <span
+                    class="glyphicon glyphicon-search"></span> Search</a>
+            </li>
+        </ul>
+    </nav>
+   <section>
+        <div class="collapse" id="find-all">
+            <div class="row">
+                <div *ngFor="let policy of policies">
+
+                    <div class="col-sm-4 col-md-8">
+                        <div class="thumbnail"
+                             style="border-left: 5px solid #00BCD4; background-color: #F0F0F0; padding-left: 10px">
+                            <span> Name: {{policy.name}}</span><br>
+                            <span> Description: {{policy.description}}</span><br>
+                            <span> Target:{{policy.target}}</span><br>
+                            <span [ngStyle] ="{'color':red}"> Conditions: {{policy.conditions}}</span><br>
+                            <span> Priority : {{policy.priority}}</span><br>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CREATE MODAL -->
+    <!-- Modal -->
+    <div id="create" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title" style="margin-top: 10px">Create / Update Policy</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <form>
+
+                            <div class="col-sm-6 col-md-10">
+                                <div class="form-group">
+                                    <label>Policy Name</label>
+                                    <input type="text" class="form-control" id="name" [(ngModel)]="model.name"
+                                           name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label>Policy Description:</label>
+                                    <input type="text" class="form-control" id="description" [(ngModel)]="model.description"
+                                           name="description">
+                                </div>
+                                <div class="form-group">
+                                    <label>Policy Target:</label>
+                                   <textarea class="form-control" id="target" [(ngModel)]="model.target"
+                                             name="target"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Policy Condition:</label>
+                                    <input type="text" class="form-control" id="conditions" [(ngModel)]="model.conditions"
+                                           name="conditions">
+                                </div>
+
+                            </div>
+                            <div class="col-sm-3 col-md-3" >
+                                <div class="form-group">
+                                    <label>Policy Priority</label>
+                                    <input type="number" class="form-control" id="priority" [(ngModel)]="model.priority"
+                                           name="priority" min="0" max="100">
+                                </div>
+
+                            </div>
+
+                            <!--<div class="col-sm-3 col-md-6">
+
+                                <div class="form-group">
+                                    <label>Id:</label>
+                                    <input type="text" class="form-control" id="id" [(ngModel)]="model.id"
+                                           name="id">
+                                </div>
+                                <div class="form-group">
+                                    <label>Options:</label>
+                                    <select class="form-control" [(ngModel)]="model.options" name="options" multiple>
+                                        <option *ngFor="let t of options" [value]="t">{{t}}</option>
+                                    </select>
+                                </div>
+                            </div>-->
+
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="save()">Create</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" (click)="updatePayrollDate()">Update</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

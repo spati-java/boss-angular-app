@@ -13,6 +13,7 @@ import {ProjectComponent} from "./project/project.component";
 import {ScheduleComponent} from "./payroll/schedule/schedule.component";
 import {PayrollDateComponent} from "./payroll/payroll-date/payroll-date.component";
 import {ProfileComponent} from "./profile/profile.component";
+import {PolicyComponent} from "./policy/policy.component";
 
 @Component({
     selector: 'my-app',
@@ -22,7 +23,7 @@ import {ProfileComponent} from "./profile/profile.component";
 
     precompile: [HomeComponent, OperationComponent, LineItemFormComponent,
         LineItemListComponent, WorkTrackingCpmponent, WorkTrackingDisplay,
-        InvoiceComponent, ProjectComponent, ScheduleComponent, PayrollDateComponent, BankAccountComponent,ProfileComponent]
+        InvoiceComponent, ProjectComponent, ScheduleComponent, PayrollDateComponent, BankAccountComponent,ProfileComponent,PolicyComponent]
 })
 export class AppComponent {
     title = 'Invoice Details';
