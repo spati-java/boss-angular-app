@@ -5,7 +5,7 @@ import {Observable} from "rxjs/Rx";
 import {PayrollDate} from "./payroll-date.model";
 
 @Injectable()
-export class PayrollDateService{
+export class     PayrollDateService{
 
     // set the header for authentication
     header = new Headers({

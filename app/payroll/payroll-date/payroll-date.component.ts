@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {PayrollDateService} from "./payroll-date.service";
 import {PayrollDate} from "./payroll-date.model";
-import {Observable} from "rxjs/Rx";
+
 @Component({
     moduleId: module.id,
     templateUrl: 'payroll-date.component.html',
